@@ -30,5 +30,13 @@ describe("when input a number then output its english spelling", function() {
     });
   })
 
+  it("when input is more than 99999", function() {
+    var inputs = ['1000001', '1110110'];
+    var results = ['one million and one', 'one million, one hundred and ten thousand, one hundred and ten'];
+
+    inputs.forEach(function(input,index) {
+      expect(results[index]).toEqual(getEnglishSpelling(input));
+    });
+  });
 
 });

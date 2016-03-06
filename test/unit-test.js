@@ -13,14 +13,24 @@ describe("when input is a number string then split it into numberArray", functio
     var input = '123456';
     var expects = ['456', '123'];
 
-      expect(expects).toEqual(getNumberString(input));
+    expect(expects).toEqual(getNumberString(input));
   });
 
   it("when input is more than 999999 then split it into three part", function() {
     var input = '123456789';
     var expects = ['789', '456', '123'];
 
-      expect(expects).toEqual(getNumberString(input));
+    expect(expects).toEqual(getNumberString(input));
   });
+});
 
+describe("transform numberArray's number into english spelling", function() {
+
+  it("when input is less than 19 then transform it", function() {
+    var input = '9';
+    var result = ['nine'];
+
+    expect(result).toEqual(transformNumberArray(input));
+  });
+  
 });

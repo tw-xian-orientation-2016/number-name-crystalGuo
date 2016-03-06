@@ -61,4 +61,11 @@ describe("connect number unit after english number spelling", function() {
 
     expect(result).toEqual(getNumberSpelling(input));
   });
+
+  it('when input is more than 999 then connect thousand', function() {
+    var input = ['ninety nine', 'one hundred and eleven'];
+    var result = ['one hundred and eleven thousand', 'ninety nine'];
+
+    expect(result).toEqual(getNumberSpelling(input));
+  });
 });

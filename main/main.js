@@ -67,3 +67,18 @@ function transformHundreds(stringNumber) {
 
   return result;
 }
+
+function getNumberSpelling(numberString) {
+  var numberSpelling = [];
+  var units = loadUnits();
+
+  for(var i = 0; i < numberString.length; i++) {
+    if(i > 0 && numberString[i] !== '') {
+      numberSpelling.push(numberString[i] + ' ' + units[i]);
+    } else {
+      numberSpelling.push(numberString[i]);
+    }
+  }
+
+  return numberSpelling.reverse();
+}

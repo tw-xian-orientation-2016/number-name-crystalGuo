@@ -26,11 +26,10 @@ describe("when input is a number string then split it into numberArray", functio
 
 describe("transform numberArray's number into english spelling", function() {
 
-  it("when input is less than 19 then transform it", function() {
+  it("when input is less than 20 then transform it", function() {
     var input = '9';
     var result = ['nine'];
 
     expect(result).toEqual(transformNumberArray(input));
   });
-  
 });

@@ -68,4 +68,11 @@ describe("connect number unit after english number spelling", function() {
 
     expect(result).toEqual(getNumberSpelling(input));
   });
+
+  it('when input is more than 999999 then connect million', function() {
+    var input = ['ninety nine', 'one hundred and eleven', 'one'];
+    var result = ['one million', 'one hundred and eleven thousand', 'ninety nine'];
+
+    expect(result).toEqual(getNumberSpelling(input));
+  });
 });

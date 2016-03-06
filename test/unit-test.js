@@ -87,4 +87,13 @@ describe('joint numberSpelling', function() {
       expect(results[index]).toEqual(jointNumberSpelling(input));
     });
   });
+
+  it('when input is more than 1000 and need to add ,', function() {
+    var inputs = [['one thousand', 'one hundred and one'], ['ten million', 'one thousand and one', 'one hundred and eleven']];
+    var results = ['one thousand, one hundred and one', 'ten million, one thousand and one, one hundred and eleven'];
+
+    inputs.forEach(function(input,index) {
+      expect(results[index]).toEqual(jointNumberSpelling(input));
+    });
+  });
 });

@@ -76,3 +76,15 @@ describe("connect number unit after english number spelling", function() {
     expect(result).toEqual(getNumberSpelling(input));
   });
 });
+
+describe('joint numberSpelling', function() {
+
+  it('when input is more than 1000 and need to add and', function() {
+    var inputs = [['one thousand', 'one'], ['ten million', 'one thousand', 'ten']];
+    var results = ['one thousand and one', 'ten million and one thousand and ten'];
+
+    inputs.forEach(function(input,index) {
+      expect(results[index]).toEqual(jointNumberSpelling(input));
+    });
+  });
+});

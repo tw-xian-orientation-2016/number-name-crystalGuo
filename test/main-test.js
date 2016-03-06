@@ -7,5 +7,12 @@ describe("when input a number then output its english spelling", function() {
     expect(result).toEqual(getEnglishSpelling(input));
   });
 
+  it("when input is more than 20 and less than 100", function() {
+    var input = '22';
+    var result = 'twenty two';
+
+    expect(result).toEqual(getEnglishSpelling(input));
+  })
+
   
 });

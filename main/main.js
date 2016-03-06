@@ -1,3 +1,12 @@
+function getEnglishSpelling(input) {
+    var numberArray = getNumberString(input);
+    var numberString = transformNumberArray(numberArray);
+    var numberSpelling = getNumberSpelling(numberString);
+    var englishSpelling = jointNumberSpelling(numberSpelling);
+
+    return englishSpelling;
+}
+
 function getNumberString(input) {
 
   var numberArray = [];

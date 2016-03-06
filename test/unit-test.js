@@ -42,5 +42,13 @@ describe("transform numberArray's number into english spelling", function() {
     });
   });
 
-  
+  it("when input is less than 1000  and more than 99 then transform it", function() {
+    var inputs = [['100'], ['199']];
+    var results = [['one hundred'], ['one hundred and ninety nine']];
+
+    inputs.forEach(function(input,index) {
+      expect(results[index]).toEqual(transformNumberArray(input));
+    });
+  });
+
 });

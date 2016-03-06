@@ -21,5 +21,14 @@ describe("when input a number then output its english spelling", function() {
     expect(result).toEqual(getEnglishSpelling(input));
   })
 
-  
+  it("when input is more than 999 and less than 1000000", function() {
+    var inputs = ['1001', '10110'];
+    var results = ['one thousand and one', 'ten thousand, one hundred and ten'];
+
+    inputs.forEach(function(input,index) {
+      expect(results[index]).toEqual(getEnglishSpelling(input));
+    });
+  })
+
+
 });

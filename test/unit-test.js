@@ -52,3 +52,13 @@ describe("transform numberArray's number into english spelling", function() {
   });
 
 });
+
+describe("connect number unit after english number spelling", function() {
+
+  it('when input is less than 100 then connect nothing', function() {
+    var input = ['ninety nine'];
+    var result = ['ninety nine'];
+
+    expect(result).toEqual(getNumberSpelling(input));
+  });
+});

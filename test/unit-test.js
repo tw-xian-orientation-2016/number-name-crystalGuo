@@ -32,4 +32,15 @@ describe("transform numberArray's number into english spelling", function() {
 
     expect(result).toEqual(transformNumberArray(input));
   });
+
+  it("when input is less than 100  and more than 19 then transform it", function() {
+    var inputs = [['20'], ['99']];
+    var results = [['twenty'], ['ninety nine']];
+
+    inputs.forEach(function(input,index) {
+      expect(results[index]).toEqual(transformNumberArray(input));
+    });
+  });
+
+  
 });

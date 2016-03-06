@@ -9,4 +9,11 @@ describe("when input is a number string then split it into numberArray", functio
     });
   });
 
+  it("when input is less than 1000000 and more than 999 then split it into two part", function() {
+    var input = '123456';
+    var expects = ['456', '123'];
+
+      expect(expects).toEqual(getNumberString(input));
+  });
+
 });

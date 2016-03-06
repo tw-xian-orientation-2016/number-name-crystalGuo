@@ -82,3 +82,20 @@ function getNumberSpelling(numberString) {
 
   return numberSpelling.reverse();
 }
+
+function jointNumberSpelling(numberSpelling) {
+  var englishNumber = numberSpelling[0];
+  if(numberSpelling.length > 1) {
+    for(var i = 1; i < numberSpelling.length; i++) {
+      if(numberSpelling[i].indexOf(' and ') > -1) {
+        englishNumber += (', ' + numberSpelling[i]);
+      } else if(numberSpelling[i] === ''){
+
+      } else {
+        englishNumber += ' and ' + numberSpelling[i];
+      }
+    }
+  }
+
+  return englishNumber==='' ? 'zero' : englishNumber;
+}
